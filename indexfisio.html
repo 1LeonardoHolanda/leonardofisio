@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fisioterapia Domiciliar em Recife | Leonardo C. Holanda</title>
+  <meta name="description" content="Fisioterapia domiciliar em Recife, Olinda e Paulista. +8 anos de experiência. Atendimento profissional com equipamentos de clínica na sua casa. Agende agora pelo WhatsApp." />
+  <meta name="keywords" content="fisioterapia domiciliar Recife, fisioterapeuta domiciliar Recife, fisioterapia em casa Recife, fisioterapeuta Recife, reabilitação domiciliar Recife" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:     #0b1d3a;
+      --blue:     #1a4b8c;
+      --sky:      #2563eb;
+      --sky-light:#eff6ff;
+      --sky-mid:  #dbeafe;
+      --accent:   #e8a020;
+      --white:    #ffffff;
+      --gray-50:  #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-300: #cbd5e1;
+      --gray-500: #64748b;
+      --gray-700: #334155;
+      --text:     #1e293b;
+      --radius:   14px;
+      --shadow:   0 2px 16px rgba(10,22,40,0.09);
+      --shadow-md:0 6px 28px rgba(10,22,40,0.13);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text); background: var(--white);
+      overflow-x: hidden; line-height: 1.65;
+    }
+    h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.2; }
+    img { display: block; max-width: 100%; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-100);
+      padding: 12px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-left { display: flex; align-items: center; gap: 10px; }
+    .nav-logo { height: 36px; width: 36px; border-radius: 8px; object-fit: contain; }
+    .nav-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; color: var(--navy); }
+    .nav-cta {
+      background: #25d366; color: #fff;
+      padding: 9px 18px; border-radius: 50px;
+      text-decoration: none; font-size: 0.82rem; font-weight: 700;
+      display: flex; align-items: center; gap: 6px;
+      white-space: nowrap; transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100svh;
+      background: linear-gradient(155deg, #0b1d3a 0%, #0e2549 50%, #142f60 100%);
+      padding: 88px 20px 60px;
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 85% 35%, rgba(37,99,235,0.2) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    /* Fotos hero - reduzidas ~40%, sem corte, cobre naturalmente */
+    .hero-photos {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+      margin-bottom: 28px; position: relative; z-index: 1;
+      max-width: 60%; margin-left: auto; margin-right: auto;
+    }
+    .hero-photos img {
+      width: 100%;
+      aspect-ratio: 3/5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: var(--radius);
+      border: 2px solid rgba(255,255,255,0.12);
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+      color: #93c5fd; font-size: 0.73rem; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 50px; margin-bottom: 18px;
+    }
+    .hero-badge::before { content: '●'; color: #4ade80; font-size: 0.5em; }
+    #hero h1 {
+      font-size: clamp(1.75rem, 5.5vw, 2.6rem); font-weight: 900;
+      color: #fff; margin-bottom: 16px;
+    }
+    #hero h1 em { font-style: italic; color: #93c5fd; }
+    .hero-tagline {
+      font-family: 'Fraunces', serif; font-style: italic;
+      font-size: 1rem; color: #93c5fd; margin-bottom: 14px;
+    }
+    .hero-desc {
+      color: #94a3b8; font-size: 0.95rem; margin-bottom: 28px;
+      font-weight: 300; max-width: 480px;
+    }
+    .hero-bullets {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 16px 18px; margin-bottom: 28px;
+    }
+    .hero-bullets li {
+      list-style: none; display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.88rem; color: #cbd5e1; font-weight: 500;
+    }
+    .hero-bullets li + li { margin-top: 8px; }
+    .hero-bullets li::before { content: '→'; color: #60a5fa; flex-shrink: 0; font-weight: 700; }
+    .btn-whatsapp {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: #25d366; color: #fff;
+      font-family: 'DM Sans', sans-serif; font-size: 1.05rem; font-weight: 700;
+      padding: 17px 28px; border-radius: 50px; text-decoration: none;
+      box-shadow: 0 8px 32px rgba(37,211,102,0.35);
+      transition: transform 0.15s, box-shadow 0.15s; margin-bottom: 14px;
+    }
+    .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(37,211,102,0.45); }
+    .hero-urgency {
+      color: #fbbf24; font-size: 0.78rem; font-weight: 500;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .hero-urgency::before { content: '⚡'; }
+    .hero-stats {
+      display: flex; gap: 0; margin-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px;
+    }
+    .hstat { flex: 1; text-align: center; }
+    .hstat:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.08); }
+    .hstat-n { font-family: 'Fraunces', serif; font-size: 1.7rem; font-weight: 900; color: #fff; }
+    .hstat-l { font-size: 0.72rem; color: #64748b; margin-top: 2px; }
+
+    /* ── SEÇÕES ── */
+    section { padding: 64px 20px; }
+    .container { max-width: 680px; margin: 0 auto; }
+    .sec-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--sky); margin-bottom: 8px;
+    }
+    .sec-title {
+      font-size: clamp(1.55rem, 4vw, 2.1rem); color: var(--navy); margin-bottom: 10px;
+    }
+    .sec-title em { font-style: italic; color: var(--sky); }
+    .sec-sub { color: var(--gray-500); font-size: 0.93rem; margin-bottom: 28px; font-weight: 300; line-height: 1.7; }
+
+    /* ── SOBRE ── */
+    #sobre { background: var(--gray-50); }
+    .sobre-foto {
+      width: 120px; height: 120px; border-radius: 50%;
+      object-fit: cover; object-position: center top;
+      border: 4px solid #fff; box-shadow: var(--shadow-md);
+      margin: 0 auto 18px;
+    }
+    .sobre-intro { text-align: center; margin-bottom: 28px; }
+    .sobre-cargo { color: var(--sky); font-size: 0.85rem; font-weight: 600; margin-top: 4px; }
+    .sobre-texto {
+      background: #fff; border-radius: var(--radius);
+      border: 1px solid var(--gray-100); padding: 22px 18px;
+      box-shadow: var(--shadow); margin-bottom: 24px;
+    }
+    .sobre-texto p { font-size: 0.9rem; color: var(--gray-700); line-height: 1.75; }
+    .sobre-texto p + p { margin-top: 12px; }
+    .quote-block {
+      border-left: 3px solid var(--sky);
+      padding: 14px 18px; margin: 16px 0;
+      background: var(--sky-light); border-radius: 0 var(--radius) var(--radius) 0;
+      font-family: 'Fraunces', serif; font-style: italic;
+      font-size: 0.95rem; color: var(--navy);
+    }
+
+    /* Especialidades como texto corrido com separador */
+    .espec-block {
+      background: #fff; border: 1px solid var(--gray-100);
+      border-radius: var(--radius); padding: 20px 18px;
+      box-shadow: var(--shadow); margin-bottom: 20px;
+    }
+    .espec-block .espec-group-title {
+      font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--navy);
+      margin-bottom: 8px; padding-bottom: 6px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .espec-block .espec-list {
+      list-style: none; margin-bottom: 18px;
+    }
+    .espec-block .espec-list li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.88rem; color: var(--gray-700); padding: 3px 0;
+    }
+    .espec-block .espec-list li::before {
+      content: '■'; font-size: 0.5em; color: var(--sky); flex-shrink: 0;
+    }
+    .espec-block .tecnicas-list {
+      list-style: none;
+    }
+    .espec-block .tecnicas-list li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.88rem; color: var(--gray-700); padding: 3px 0;
+    }
+    .espec-block .tecnicas-list li::before {
+      content: '·'; font-size: 1.2em; color: var(--gray-400); flex-shrink: 0; line-height: 1;
+    }
+
+    .traj-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+    .traj-item {
+      background: #fff; border: 1px solid var(--gray-100);
+      border-radius: var(--radius); padding: 16px 18px;
+      box-shadow: var(--shadow); border-left: 3px solid var(--sky);
+    }
+    .traj-item.old { border-left-color: var(--gray-300); }
+    .traj-period { font-size: 0.72rem; font-weight: 700; color: var(--sky); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 3px; }
+    .traj-item.old .traj-period { color: var(--gray-500); }
+    .traj-role { font-weight: 700; font-size: 0.92rem; color: var(--navy); margin-bottom: 4px; }
+    .traj-desc { font-size: 0.8rem; color: var(--gray-500); }
+
+    .cert-grid { display: flex; flex-direction: column; gap: 10px; }
+    .cert-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: #fff; border: 1px solid var(--gray-100);
+      border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow);
+    }
+    .cert-emoji { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+    .cert-text { font-size: 0.85rem; color: var(--text); line-height: 1.5; }
+    .cert-text strong { color: var(--navy); }
+
+    /* ── PARA QUEM ── */
+    #para-quem { background: var(--white); }
+    .aud-grid { display: flex; flex-direction: column; gap: 10px; }
+    .aud-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--gray-50); border: 1px solid var(--gray-100);
+      border-radius: var(--radius); padding: 16px;
+    }
+    .aud-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .aud-t h3 { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .aud-t p { font-size: 0.8rem; color: var(--gray-500); }
+
+    /* ── MÉTODO ── */
+    #metodo { background: var(--sky-light); }
+    .steps { display: flex; flex-direction: column; padding-left: 14px; }
+    .step {
+      display: flex; gap: 18px;
+      padding: 18px 0 18px 24px;
+      border-left: 2px solid var(--sky-mid);
+      position: relative;
+    }
+    .step:last-child { border-left-color: transparent; }
+    .sdot {
+      position: absolute; left: -9px; top: 20px;
+      width: 16px; height: 16px; border-radius: 50%;
+      background: var(--sky); border: 3px solid #eff6ff;
+      box-shadow: 0 0 0 2px var(--sky);
+    }
+    .step:last-child .sdot { background: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+    .snum { font-size: 0.68rem; font-weight: 700; color: var(--sky); letter-spacing: 0.06em; margin-bottom: 3px; }
+    .step h3 { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .step p { font-size: 0.8rem; color: var(--gray-500); }
+
+    /* ── EQUIPAMENTOS ── */
+    #equipamentos { background: var(--white); }
+    .equip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .equip-card {
+      background: var(--gray-50); border: 1px solid var(--gray-100);
+      border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+      cursor: zoom-in; transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .equip-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    /* Fotos de equipamentos: espaço generoso, sem corte forçado */
+    .equip-img-wrap {
+      width: 100%;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      background: var(--gray-100);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .equip-img-wrap::after {
+      content: '🔍';
+      position: absolute; bottom: 8px; right: 8px;
+      background: rgba(0,0,0,0.45);
+      font-size: 0.85rem; width: 30px; height: 30px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      pointer-events: none; opacity: 0; transition: opacity 0.2s;
+    }
+    .equip-card:hover .equip-img-wrap::after { opacity: 1; }
+    .equip-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .equip-info { padding: 12px 12px 14px; }
+    .equip-info h3 { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .equip-info p { font-size: 0.72rem; color: var(--gray-500); }
+    .equip-plus {
+      grid-column: 1 / -1;
+      background: var(--sky-light); border: 1px solid var(--sky-mid);
+      border-radius: var(--radius); padding: 14px 16px;
+      font-size: 0.82rem; color: var(--blue); font-weight: 500; text-align: center;
+    }
+    .equip-plus strong { color: var(--navy); }
+
+    /* ── LIGHTBOX ── */
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: rgba(5,10,20,0.93);
+      flex-direction: column; align-items: center; justify-content: center;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox-img {
+      max-width: 92vw; max-height: 72vh;
+      object-fit: contain; border-radius: 12px;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+      user-select: none; -webkit-user-drag: none;
+      transition: opacity 0.18s ease;
+    }
+    #lightbox-img.fading { opacity: 0; }
+    #lightbox-caption {
+      margin-top: 16px; text-align: center;
+      color: #e2e8f0; font-size: 0.9rem; font-weight: 600;
+    }
+    #lightbox-sub {
+      color: #64748b; font-size: 0.75rem; margin-top: 4px; text-align: center;
+    }
+    #lightbox-counter {
+      color: #475569; font-size: 0.72rem; margin-top: 6px;
+    }
+    .lb-btn {
+      position: fixed; top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+      color: #fff; font-size: 1.4rem; width: 48px; height: 48px;
+      border-radius: 50%; cursor: pointer; display: flex;
+      align-items: center; justify-content: center;
+      transition: background 0.15s; backdrop-filter: blur(4px);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .lb-btn:hover { background: rgba(255,255,255,0.22); }
+    #lb-prev { left: 12px; }
+    #lb-next { right: 12px; }
+    #lb-close {
+      position: fixed; top: 14px; right: 14px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+      color: #fff; font-size: 1.1rem; width: 40px; height: 40px;
+      border-radius: 50%; cursor: pointer; display: flex;
+      align-items: center; justify-content: center;
+      transition: background 0.15s; backdrop-filter: blur(4px);
+      -webkit-tap-highlight-color: transparent;
+    }
+    #lb-close:hover { background: rgba(255,255,255,0.22); }
+    .lb-dots {
+      display: flex; gap: 7px; margin-top: 14px; flex-wrap: wrap;
+      justify-content: center; max-width: 92vw;
+    }
+    .lb-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: rgba(255,255,255,0.25); transition: background 0.15s;
+      cursor: pointer;
+    }
+    .lb-dot.active { background: #60a5fa; }
+
+    /* ── PLANOS ── */
+    #planos { background: var(--gray-50); }
+    .plans { display: flex; flex-direction: column; gap: 14px; }
+    .plan {
+      background: #fff; border: 1px solid var(--gray-100);
+      border-radius: var(--radius); padding: 24px 18px;
+      box-shadow: var(--shadow); position: relative;
+    }
+    .plan.featured {
+      background: linear-gradient(150deg, var(--navy), #1a3d72);
+      border-color: transparent; box-shadow: var(--shadow-md);
+    }
+    .plan-badge {
+      position: absolute; top: -11px; left: 18px;
+      background: var(--accent); color: #fff;
+      font-size: 0.63rem; font-weight: 800; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 4px 12px; border-radius: 50px;
+    }
+    .plan-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; }
+    .plan-num { font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 900; color: var(--navy); line-height: 1; }
+    .plan.featured .plan-num { color: #fff; }
+    .plan-unit { font-size: 0.85rem; color: var(--gray-500); }
+    .plan.featured .plan-unit { color: #94a3b8; }
+    .plan-sessions { font-size: 0.82rem; font-weight: 600; color: var(--sky); margin-bottom: 4px; }
+    .plan.featured .plan-sessions { color: #93c5fd; }
+    .plan-ideal { font-size: 0.78rem; color: var(--gray-500); margin-bottom: 14px; font-style: italic; }
+    .plan.featured .plan-ideal { color: #94a3b8; }
+    .plan-includes { display: flex; flex-direction: column; gap: 5px; }
+    .plan-includes li {
+      list-style: none; font-size: 0.78rem;
+      display: flex; gap: 8px; align-items: flex-start; color: var(--gray-700);
+    }
+    .plan.featured .plan-includes li { color: rgba(255,255,255,0.85); }
+    .plan-includes li::before { content: '✓'; color: #4ade80; font-weight: 700; flex-shrink: 0; }
+    .plan-payment { text-align: center; margin-top: 16px; font-size: 0.78rem; color: var(--gray-500); font-style: italic; }
+
+    /* ── FORMAS ── */
+    #formas { background: var(--white); }
+    .formas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .forma-card {
+      background: var(--gray-50); border: 1px solid var(--gray-100);
+      border-radius: var(--radius); padding: 18px 14px; box-shadow: var(--shadow);
+    }
+    .forma-icon { font-size: 1.5rem; margin-bottom: 8px; }
+    .forma-period { font-size: 0.7rem; font-weight: 700; color: var(--sky); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
+    .forma-horario { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .forma-local { font-size: 0.78rem; color: var(--gray-700); margin-bottom: 6px; line-height: 1.5; }
+    .forma-pagto { font-size: 0.72rem; color: var(--gray-500); font-style: italic; }
+
+    /* ── CTA ── */
+    #cta {
+      background: linear-gradient(155deg, #0b1d3a 0%, #142f60 100%);
+      padding: 64px 20px; text-align: center;
+    }
+    #cta h2 { color: #fff; font-size: clamp(1.6rem, 4.5vw, 2.2rem); margin-bottom: 12px; }
+    #cta h2 em { font-style: italic; color: #93c5fd; }
+    #cta .cta-desc { color: #94a3b8; font-size: 0.92rem; margin-bottom: 28px; font-weight: 300; max-width: 400px; margin-left: auto; margin-right: auto; }
+    .cta-urgency {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.25);
+      color: #fbbf24; font-size: 0.78rem; font-weight: 600;
+      padding: 7px 16px; border-radius: 50px; margin-bottom: 24px;
+    }
+    .btn-cta-main {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: #25d366; color: #fff;
+      font-family: 'DM Sans', sans-serif; font-size: 1.05rem; font-weight: 700;
+      padding: 18px 28px; border-radius: 50px; text-decoration: none;
+      box-shadow: 0 8px 32px rgba(37,211,102,0.35);
+      transition: transform 0.15s; max-width: 380px; margin: 0 auto 16px;
+    }
+    .btn-cta-main:hover { transform: translateY(-2px); }
+    .cta-contacts { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
+    .cta-contact-item { color: #64748b; font-size: 0.82rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .cta-quote { margin-top: 32px; font-style: italic; color: #334155; font-family: 'Fraunces', serif; font-size: 0.98rem; }
+    .cta-quote-sub { color: #475569; font-size: 0.78rem; margin-top: 8px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); color: #334155;
+      text-align: center; padding: 24px 20px;
+      font-size: 0.73rem; line-height: 1.8;
+    }
+    footer strong { color: #475569; }
+
+    /* ── FAB ── */
+    .fab {
+      position: fixed; bottom: 20px; right: 20px; z-index: 200;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25d366; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    .fab:hover { animation: none; transform: scale(1.08); }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+      50%  { box-shadow: 0 6px 28px rgba(37,211,102,0.7), 0 0 0 10px rgba(37,211,102,0.08); }
+    }
+
+    /* ── REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 360px) {
+      .equip-grid { grid-template-columns: 1fr; }
+      .formas-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <img src="imagens/imagem_nav.jpg" alt="Logo Leonardo Holanda" class="nav-logo" />
+    <span class="nav-name">Leonardo Holanda</span>
+  </div>
+  <a href="https://wa.me/5581999046539?text=Ol%C3%A1%21+Me+diga+para+quem+%C3%A9+o+atendimento+%28voc%C3%AA+ou+familiar%29%2C+a+idade+e+qual+a+principal+dificuldade.+Assim+consigo+te+orientar+melhor."
+     class="nav-cta" target="_blank" rel="noopener">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    WhatsApp
+  </a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-photos">
+    <img src="imagens/imagem_hero1.jpg" alt="Leonardo Holanda - Fisioterapeuta" />
+    <img src="imagens/imagem_hero2.jpg" alt="Atendimento domiciliar" />
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">Recife · Olinda · Paulista — PE</div>
+    <p class="hero-tagline">Fisioterapia Domiciliar</p>
+    <h1>Recuperação que <em>acontece em casa</em></h1>
+    <p class="hero-desc">Acompanhamento profissional, organizado e documentado para a tranquilidade de quem cuida.</p>
+    <ul class="hero-bullets">
+      <li>Evolução documentada sessão a sessão</li>
+      <li>Laudo final para médico e INSS</li>
+      <li>Equipamentos de clínica levados até você</li>
+    </ul>
+    <a href="https://wa.me/5581999046539?text=Ol%C3%A1%21+Me+diga+para+quem+%C3%A9+o+atendimento+%28voc%C3%AA+ou+familiar%29%2C+a+idade+e+qual+a+principal+dificuldade.+Assim+consigo+te+orientar+melhor."
+       class="btn-whatsapp" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Agendar avaliação pelo WhatsApp
+    </a>
+    <div class="hero-urgency">Agenda limitada · Vagas por região</div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-n">+8</div><div class="hstat-l">anos de experiência</div></div>
+      <div class="hstat"><div class="hstat-n">desde 2018</div><div class="hstat-l">atendimento domiciliar</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-intro reveal">
+      <img src="imagens/imagem_sobre.jpg" alt="Leonardo Holanda - Fisioterapeuta" class="sobre-foto" />
+      <div class="sec-label">Quem é Leonardo?</div>
+      <h2 class="sec-title">Mais de 8 anos cuidando<br><em>de quem você ama</em></h2>
+      <p class="sobre-cargo">Fisioterapeuta</p>
+    </div>
+
+    <div class="sobre-texto reveal">
+      <p>Formei-me em Fisioterapia pela Faculdade São Miguel em 2017. Desde os primeiros meses, descobri que o atendimento domiciliar vai além da técnica: exige presença, sensibilidade e organização em que o paciente e a família possam confiar.</p>
+      <div class="quote-block">
+        "Uma das minhas primeiras pacientes tinha 92 anos. Chegou do hospital sem força para se sentar/levantar. Com protocolo adequado e dedicação, ela voltou a caminhar pela própria casa — garantindo independência no dia a dia."
+      </div>
+      <p>Atuo também na Ortofisio, referência em Recife. O ambiente de alta exigência me mantém em constante atualização. Nas tardes/noites, levo esse mesmo padrão diretamente à sua casa.</p>
+    </div>
+
+    <div class="espec-block reveal">
+      <div class="espec-group-title">Especialidades</div>
+      <ul class="espec-list">
+        <li>Traumato-Ortopédico</li>
+        <li>Pós-Operatório</li>
+        <li>Idosos e Longevidade</li>
+        <li>Lesões Esportivas</li>
+        <li>Reumatológico</li>
+      </ul>
+      <div class="espec-group-title">Outras Técnicas</div>
+      <ul class="tecnicas-list">
+        <li>Ventosaterapia</li>
+        <li>Dry Needling</li>
+        <li>Liberação Miofascial</li>
+        <li>TENS / FES / Fotobiomodulação</li>
+      </ul>
+    </div>
+
+    <div class="sec-label reveal" style="margin-bottom:12px;">Trajetória Profissional</div>
+    <div class="traj-list reveal">
+      <div class="traj-item">
+        <div class="traj-period">2018 – Hoje</div>
+        <div class="traj-role">Fisioterapia Domiciliar</div>
+        <div class="traj-desc">Protocolo estruturado, equipamentos próprios e documentação completa de cada caso.</div>
+      </div>
+      <div class="traj-item">
+        <div class="traj-period">Fev/2019 – Hoje</div>
+        <div class="traj-role">Fisioterapeuta na Ortofisio – Recife</div>
+        <div class="traj-desc">Clínica de referência. Reabilitação traumato-ortopédica, foco em dor, mobilidade e força.</div>
+      </div>
+      <div class="traj-item old">
+        <div class="traj-period">Out/2019 – Fev/2021</div>
+        <div class="traj-role">Fisioterapeuta na Hapvida – Olinda</div>
+        <div class="traj-desc">Grande volume de idosos. Organização e agilidade sem perda de qualidade.</div>
+      </div>
+    </div>
+
+    <div class="sec-label reveal" style="margin-bottom:12px;">Formação e Certificações</div>
+    <div class="cert-grid reveal">
+      <div class="cert-item"><span class="cert-emoji">🎓</span><div class="cert-text"><strong>Bacharelado em Fisioterapia</strong> — Faculdade São Miguel, 2017</div></div>
+      <div class="cert-item"><span class="cert-emoji">🎓</span><div class="cert-text"><strong>Pós-Graduação em Fisioterapia Esportiva</strong> — Instituto Paiva, 2021</div></div>
+      <div class="cert-item"><span class="cert-emoji">📜</span><div class="cert-text"><strong>Conceito Mulligan</strong> — Dan Pilderwasser, 2019</div></div>
+      <div class="cert-item"><span class="cert-emoji">📊</span><div class="cert-text"><strong>Functional Movement Screen</strong> — FMS, 2020</div></div>
+      <div class="cert-item"><span class="cert-emoji">🏫</span><div class="cert-text"><strong>Monitoria – Neurologia</strong> — Faculdade São Miguel, 2016</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section id="para-quem">
+  <div class="container">
+    <div class="sec-label">Indicações</div>
+    <h2 class="sec-title">Para quem é o <em>atendimento?</em></h2>
+    <p class="sec-sub">Atendimento domiciliar ideal para quem não pode ou prefere não sair de casa.</p>
+    <div class="aud-grid reveal">
+      <div class="aud-item"><div class="aud-icon">🦴</div><div class="aud-t"><h3>Pós-Operatório</h3><p>Cirurgias ortopédicas, próteses, fraturas — recuperação com segurança em casa.</p></div></div>
+      <div class="aud-item"><div class="aud-icon">👴</div><div class="aud-t"><h3>Idosos com dificuldade de mobilidade</h3><p>Recuperação de força, equilíbrio e independência sem sair de casa.</p></div></div>
+      <div class="aud-item"><div class="aud-icon">🩺</div><div class="aud-t"><h3>Lesões Ortopédicas</h3><p>Joelho, ombro, coluna, quadril e outras articulações.</p></div></div>
+      <div class="aud-item"><div class="aud-icon">😣</div><div class="aud-t"><h3>Dores Crônicas</h3><p>Lombalgia, cervicalgia, reumatismo e dores que limitam o dia a dia.</p></div></div>
+      <div class="aud-item"><div class="aud-icon">🔄</div><div class="aud-t"><h3>Reabilitação Geral</h3><p>Qualquer situação em que o conforto do domicílio acelere a recuperação.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section id="metodo">
+  <div class="container">
+    <div class="sec-label">Método de Atendimento</div>
+    <h2 class="sec-title">Organização do início <em>até o laudo final</em></h2>
+    <p class="sec-sub">Cada sessão segue protocolo claro. Você e a família acompanham o progresso em tempo real.</p>
+    <div class="steps reveal">
+      <div class="step"><div class="sdot"></div><div><div class="snum">01</div><h3>Avaliação Inicial</h3><p>Histórico clínico, limitações, objetivos e expectativas do paciente e da família.</p></div></div>
+      <div class="step"><div class="sdot"></div><div><div class="snum">02</div><h3>Protocolo Personalizado</h3><p>Plano com metas de curto e longo prazo, adaptado à realidade de cada pessoa.</p></div></div>
+      <div class="step"><div class="sdot"></div><div><div class="snum">03</div><h3>Sessões Estruturadas</h3><p>Mobilidade → Ativação muscular → Recursos de Eletrotermofototerapia → finalização.</p></div></div>
+      <div class="step"><div class="sdot"></div><div><div class="snum">04</div><h3>Evolução Documentada</h3><p>Registro de cada sessão. A família acompanha o tratamento.</p></div></div>
+      <div class="step"><div class="sdot"></div><div><div class="snum">05</div><h3>Laudo Final ★</h3><p>Emitido ao término — para família, médico ou para fins de INSS.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPAMENTOS -->
+<!-- 
+  ═══════════════════════════════════════════════════════
+  INSTRUÇÕES PARA AS FOTOS DOS EQUIPAMENTOS
+  ═══════════════════════════════════════════════════════
+  1. Crie uma pasta chamada "imagens" na raiz do repositório GitHub.
+  2. Renomeie e salve cada foto com exatamente o nome abaixo.
+  3. Suba as fotos para essa pasta (veja a nota no final do arquivo).
+  
+  LISTA DE ARQUIVOS NECESSÁRIOS (pasta: imagens/):
+    imagens/maca.jpg                  → Maca portátil profissional
+    imagens/tens-fes.jpg              → Aparelho IBRAMED TENS/FES
+    imagens/laser.jpg                 → Aparelho de laser fotobiomodulação
+    imagens/ventosas.jpg              → Kit de ventosas
+    imagens/caneleiras.jpg            → Caneleiras e rolo de liberação
+    imagens/caneleiras-musculacao.jpg → Caneleiras de musculação
+    imagens/miniband.jpg              → Mini bands / elásticos
+    imagens/cicloergometro.jpg        → Ciclo ergômetro / bicicleta
+    imagens/bola-suica.jpg            → Bola suíça e eletrodos
+  ═══════════════════════════════════════════════════════
+-->
+<section id="equipamentos">
+  <div class="container">
+    <div class="sec-label">Estrutura</div>
+    <h2 class="sec-title">Equipamentos — <em>a clínica vai até você</em></h2>
+    <p class="sec-sub">O que levo em cada atendimento:</p>
+    <div class="equip-grid reveal">
+
+      <div class="equip-card">
+        <div class="equip-img-wrap">
+          <!-- Foto: maca portátil profissional -->
+          <img src="imagens/maca.jpg" alt="Maca Portátil Profissional" />
+        </div>
+        <div class="equip-info">
+          <h3>Maca Portátil Profissional</h3>
+          <p>Estrutura resistente, montada no local.</p>
+        </div>
+      </div>
+
+      <div class="equip-card">
+        <div class="equip-img-wrap">
+          <!-- Foto: aparelho IBRAMED TENS/FES -->
+          <img src="imagens/tens-fes.jpg" alt="IBRAMED TENS FES" />
+        </div>
+        <div class="equip-info">
+          <h3>IBRAMED – TENS / FES</h3>
+          <p>Controle de dor (TENS) e estimulação muscular funcional (FES).</p>
+        </div>
+      </div>
+
+      <div class="equip-card">
+        <div class="equip-img-wrap">
+          <!-- Foto: aparelho de laser -->
+          <img src="imagens/laser.jpg" alt="Laser Fotobiomodulação" />
+        </div>
+        <div class="equip-info">
+          <h3>Laser – Fotobiomodulação</h3>
+          <p>Cicatrização acelerada, anti-inflamatório e analgésico.</p>
+        </div>
+      </div>
+
+      <div class="equip-card">
+        <div class="equip-img-wrap">
+          <!-- Foto: kit de ventosas -->
+          <img src="imagens/ventosas.jpg" alt="Ventosaterapia" />
+        </div>
+        <div class="equip-info">
+          <h3>Ventosaterapia</h3>
+          <p>Kit para liberação miofascial.</p>
+        </div>
+      </div>
+
+      <div class="equip-card">
+        <div class="equip-img-wrap">
+          <!-- Foto: caneleiras e rolo de liberação -->
+          <img src="imagens/caneleiras.jpg" alt="Caneleiras e Rolo de Liberação" />
+        </div>
+        <div class="equip-info">
+          <h3>Caneleiras e Rolo de Liberação</h3>
+          <p>Treino de ativação muscular e força.</p>
+        </div>
+      </div>
+
+      <div class="equip-card">
+        <div class="equip-img-wrap">
+          <!-- Foto: mini bands / elásticos -->
+          <img src="imagens/miniband.jpg" alt="Mini Band" />
+        </div>
+        <div class="equip-info">
+          <h3>Mini Band</h3>
+          <p>Resistências elásticas.</p>
+        </div>
+      </div>
+
+      <div class="equip-card">
+        <div class="equip-img-wrap">
+          <!-- Foto: ciclo ergômetro / bicicleta -->
+          <img src="imagens/cicloergometro.jpg" alt="Ciclo Ergômetro" />
+        </div>
+        <div class="equip-info">
+          <h3>Ciclo Ergômetro</h3>
+          <p>Mobilidade e cardio.</p>
+        </div>
+      </div>
+
+      <div class="equip-card">
+        <div class="equip-img-wrap">
+          <!-- Foto: bola suíça e eletrodos -->
+          <img src="imagens/bola-suica.jpg" alt="Bola Suíça e Eletrodos" />
+        </div>
+        <div class="equip-info">
+          <h3>Bola Suíça e Eletrodos</h3>
+          <p>Funcionalidade e higiene individual.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section id="planos">
+  <div class="container">
+    <div class="sec-label">Ciclos de Atendimento</div>
+    <h2 class="sec-title">Planos estruturados para <em>cada fase da recuperação</em></h2>
+    <div class="plans reveal">
+      <div class="plan">
+        <div class="plan-head"><span class="plan-num">4</span><span class="plan-unit">semanas</span></div>
+        <div class="plan-sessions">12 sessões · 3×/semana</div>
+        <div class="plan-ideal">Ideal para: pós-operatório imediato e casos agudos</div>
+        <ul class="plan-includes">
+          <li>Equipamentos de eletroterapia e fotobiomodulação</li>
+          <li>Maca portátil profissional montada no local</li>
+          <li>Materiais p/ estímulo nos dias sem sessão</li>
+          <li>Pesos, elásticos e acessórios de exercício</li>
+          <li>Evolução documentada de cada sessão</li>
+          <li>Laudo final completo para médico / INSS</li>
+        </ul>
+      </div>
+      <div class="plan featured">
+        <div class="plan-head"><span class="plan-num">6</span><span class="plan-unit">semanas</span></div>
+        <div class="plan-sessions">18 sessões · 3×/semana</div>
+        <div class="plan-ideal">Ideal para: reabilitação moderada e casos subagudos</div>
+        <ul class="plan-includes">
+          <li>Equipamentos de eletroterapia e fotobiomodulação</li>
+          <li>Maca portátil profissional montada no local</li>
+          <li>Materiais p/ estímulo nos dias sem sessão</li>
+          <li>Pesos, elásticos e acessórios de exercício</li>
+          <li>Evolução documentada de cada sessão</li>
+          <li>Laudo final completo para médico / INSS</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <div class="plan-head"><span class="plan-num">8</span><span class="plan-unit">semanas</span></div>
+        <div class="plan-sessions">24 sessões · 3×/semana</div>
+        <div class="plan-ideal">Ideal para: tratamentos complexos e recuperações extensas</div>
+        <ul class="plan-includes">
+          <li>Equipamentos de eletroterapia e fotobiomodulação</li>
+          <li>Maca portátil profissional montada no local</li>
+          <li>Materiais p/ estímulo nos dias sem sessão</li>
+          <li>Pesos, elásticos e acessórios de exercício</li>
+          <li>Evolução documentada de cada sessão</li>
+          <li>Laudo final completo para médico / INSS</li>
+        </ul>
+      </div>
+    </div>
+    <p class="plan-payment"><em>O investimento varia conforme o ciclo e a complexidade do caso. | Pagamentos: à vista, parcelado no cartão de crédito ou 50% no início e 50% no final</em></p>
+  </div>
+</section>
+
+<!-- FORMAS -->
+<section id="formas">
+  <div class="container">
+    <div class="sec-label">Agenda</div>
+    <h2 class="sec-title">Formas de <em>Atendimento</em></h2>
+    <div class="formas-grid reveal">
+      <div class="forma-card">
+        <div class="forma-icon">🌅</div>
+        <div class="forma-period">Período da Manhã</div>
+        <div class="forma-horario">06h às 12h</div>
+        <div class="forma-local">Clínica Ortofisio<br>Rua Real da Torre, 898<br>Madalena · Recife</div>
+        <div class="forma-pagto">Plano de saúde · Cartão · À vista</div>
+      </div>
+      <div class="forma-card">
+        <div class="forma-icon">🏠</div>
+        <div class="forma-period">Período da Tarde</div>
+        <div class="forma-horario">13h às 18h</div>
+        <div class="forma-local">Atendimento Domiciliar<br>Recife · Olinda<br>Paulista</div>
+        <div class="forma-pagto">Cartão de crédito · À vista</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta">
+  <div class="container">
+    <div class="sec-label" style="color:#60a5fa;">Agendar</div>
+    <h2>Tem interesse?<br><em>Me chame agora para ver disponibilidade.</em></h2>
+    <p class="cta-desc">Cada caso é único. Entre em contato e descubra como posso ajudar na recuperação de quem você ama.</p>
+    <div class="cta-urgency">⚡ Agenda limitada — confirme disponibilidade</div>
+    <a href="https://wa.me/5581999046539?text=Ol%C3%A1%21+Me+diga+para+quem+%C3%A9+o+atendimento+%28voc%C3%AA+ou+familiar%29%2C+a+idade+e+qual+a+principal+dificuldade.+Assim+consigo+te+orientar+melhor."
+       class="btn-cta-main" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.358.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Enviar mensagem no WhatsApp
+    </a>
+    <div class="cta-contacts">
+      <div class="cta-contact-item">📞 (81) 9 9904-6539</div>
+      <div class="cta-contact-item">✉️ fisiolcarvalho.holanda@gmail.com</div>
+    </div>
+    <p class="cta-quote">"Reabilitar é mais do que tratar – é devolver a independência."</p>
+    <p class="cta-quote-sub">O objetivo vai além da sessão — é devolver independência, qualidade de vida e tranquilidade para toda a família.</p>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Leonardo C. Holanda — Fisioterapeuta</strong></p>
+  <p>Fisioterapia domiciliar em Recife, Olinda e Paulista – PE</p>
+  <p style="margin-top:6px;">fisiolcarvalho.holanda@gmail.com · (81) 9 9904-6539</p>
+</footer>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a href="https://wa.me/5581999046539?text=Ol%C3%A1%21+Me+diga+para+quem+%C3%A9+o+atendimento+%28voc%C3%AA+ou+familiar%29%2C+a+idade+e+qual+a+principal+dificuldade.+Assim+consigo+te+orientar+melhor."
+   class="fab" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar equipamento">
+  <button id="lb-close" aria-label="Fechar">&#x2715;</button>
+  <button class="lb-btn" id="lb-prev" aria-label="Anterior">&#8249;</button>
+  <img id="lightbox-img" src="" alt="" />
+  <button class="lb-btn" id="lb-next" aria-label="Próximo">&#8250;</button>
+  <div id="lightbox-caption"></div>
+  <div id="lightbox-sub"></div>
+  <div id="lightbox-counter"></div>
+  <div class="lb-dots" id="lb-dots"></div>
+</div>
+
+<script>
+  /* Reveal on scroll */
+  const io = new IntersectionObserver(
+    e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')),
+    {threshold: 0.1}
+  );
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+
+  /* LIGHTBOX */
+  (function () {
+    const lb      = document.getElementById('lightbox');
+    const lbImg   = document.getElementById('lightbox-img');
+    const lbCap   = document.getElementById('lightbox-caption');
+    const lbSub   = document.getElementById('lightbox-sub');
+    const lbCount = document.getElementById('lightbox-counter');
+    const lbDots  = document.getElementById('lb-dots');
+    const btnPrev = document.getElementById('lb-prev');
+    const btnNext = document.getElementById('lb-next');
+    const btnClose= document.getElementById('lb-close');
+
+    const cards = Array.from(document.querySelectorAll('.equip-card')).filter(c => {
+      const img = c.querySelector('img');
+      return img && img.getAttribute('src') && img.getAttribute('src') !== '';
+    });
+
+    let current = 0;
+
+    function buildDots() {
+      lbDots.innerHTML = '';
+      cards.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'lb-dot' + (i === current ? ' active' : '');
+        d.setAttribute('aria-label', 'Equipamento ' + (i + 1));
+        d.addEventListener('click', function() { goTo(i); });
+        lbDots.appendChild(d);
+      });
+    }
+
+    function updateDots() {
+      lbDots.querySelectorAll('.lb-dot').forEach(function(d, i) {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    function showItem(index) {
+      const card = cards[index];
+      const img  = card.querySelector('img');
+      const h3   = card.querySelector('h3');
+      const p    = card.querySelector('p');
+
+      lbImg.classList.add('fading');
+      setTimeout(function() {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt || '';
+        lbCap.textContent  = h3 ? h3.textContent : '';
+        lbSub.textContent  = p  ? p.textContent  : '';
+        lbCount.textContent = (index + 1) + ' / ' + cards.length;
+        lbImg.classList.remove('fading');
+        updateDots();
+      }, 160);
+    }
+
+    function goTo(index) {
+      current = (index + cards.length) % cards.length;
+      showItem(current);
+    }
+
+    function open(index) {
+      current = index;
+      buildDots();
+      showItem(current);
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    cards.forEach(function(card, i) {
+      card.addEventListener('click', function() { open(i); });
+    });
+
+    btnPrev.addEventListener('click', function(e) { e.stopPropagation(); goTo(current - 1); });
+    btnNext.addEventListener('click', function(e) { e.stopPropagation(); goTo(current + 1); });
+    btnClose.addEventListener('click', close);
+    lb.addEventListener('click', function(e) { if (e.target === lb) close(); });
+
+    document.addEventListener('keydown', function(e) {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'ArrowLeft')  goTo(current - 1);
+      if (e.key === 'ArrowRight') goTo(current + 1);
+      if (e.key === 'Escape')     close();
+    });
+
+    var touchStartX = 0;
+    lb.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, {passive: true});
+    lb.addEventListener('touchend',   function(e) {
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) goTo(dx < 0 ? current + 1 : current - 1);
+    }, {passive: true});
+  })();
+</script>
+
+<!--
+  ═══════════════════════════════════════════════════════════════════════
+  NOTA: COMO SUBIR AS FOTOS NO GITHUB E LINKAR NO CÓDIGO
+  ═══════════════════════════════════════════════════════════════════════
+
+  PASSO 1 — PREPARAR AS FOTOS NO COMPUTADOR
+  ─────────────────────────────────────────
+  • Renomeie cada foto com os nomes exatos listados no comentário acima
+    (ex: maca.jpg, tens-fes.jpg, laser.jpg, etc.)
+  • Use formatos JPG ou PNG. Fotos menores que 500 KB carregam mais rápido.
+  • Dica: redimensione para no máximo 800×1000 px antes de subir.
+
+  PASSO 2 — SUBIR AS FOTOS PELO GITHUB (pelo site, sem precisar de Git)
+  ─────────────────────────────────────────────────────────────────────
+  1. Acesse github.com e abra o repositório do seu site.
+  2. Clique em "Add file" → "Upload files".
+  3. Se ainda não existe a pasta "imagens", crie assim:
+       - No campo de destino (path), digite:  imagens/maca.jpg
+       - O GitHub cria a pasta "imagens" automaticamente.
+  4. Arraste ou selecione todos os arquivos de foto de uma vez.
+  5. Clique em "Commit changes" (botão verde no final da página).
+  6. Aguarde alguns segundos para o GitHub Pages atualizar.
+
+  PASSO 3 — VERIFICAR
+  ─────────────────────────────────────────────────────────────────────
+  • Acesse o seu site publicado.
+  • Cada card de equipamento deve exibir a foto correspondente.
+  • Se alguma foto não aparecer, verifique se o nome do arquivo
+    está exatamente igual ao que está no código (sensível a maiúsculas).
+
+  ESTRUTURA DE PASTAS ESPERADA NO GITHUB:
+  ├── index.html   (este arquivo)
+  └── imagens/
+      ├── imagem_nav.jpg          ← logo/foto pequena no canto do menu
+      ├── imagem_hero1.jpg        ← 1ª foto do bloco hero (esquerda)
+      ├── imagem_hero2.jpg        ← 2ª foto do bloco hero (direita)
+      ├── imagem_sobre.jpg        ← foto da seção "Sobre"
+      ├── maca.jpg
+      ├── tens-fes.jpg
+      ├── laser.jpg
+      ├── ventosas.jpg
+      ├── caneleiras.jpg
+      ├── caneleiras-musculacao.jpg
+      ├── miniband.jpg
+      ├── cicloergometro.jpg
+      └── bola-suica.jpg
+  ═══════════════════════════════════════════════════════════════════════
+-->
+</body>
+</html>
